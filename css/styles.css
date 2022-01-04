@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  min-width: 250px;
+  min-width: 230px;
 }
 
 * {
@@ -35,18 +35,84 @@ ul li :hover {
 }
 
 /* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
-ul li .checked {
+ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Добавить отметку "проверено" при нажатии на нее */
-ul li .checked ::before {
+ul li.checked::before {
   content: "";
   position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 18px;
+  width: 7px;
+}
+
+/* Стиль кнопки закрытия */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Стиль заголовка */
+.header {
+  background-color: #da473c;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
 }
 
 .title {
   margin: 5px;
+  padding-bottom: 10px;
+}
+
+/* Очистить поплавки после заголовка */
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Стиль ввода */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Стиль кнопки "Добавить" */
+.addBtn {
+  padding: 10px;
+  margin-left: 7px;
+  width: 18%;
+  background: #d9d9d9;
+  color: rgb(46, 39, 39);
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
 }

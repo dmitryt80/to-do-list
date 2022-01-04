@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Удалить поля и отступы из списка */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Стиль элементов списка */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+/* Установить для всех нечетных элементов списка другой 
+ цвет(полосы зебры) */
+ul li :nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Более темный фон-цвет при наведении курсора */
+ul li :hover {
+  background: #ddd;
+}
+
+/* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+ul li .checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Добавить отметку "проверено" при нажатии на нее */
+ul li .checked ::before {
+  content: "";
+  position: absolute;
+}
+
+.title {
+  margin: 5px;
+}
